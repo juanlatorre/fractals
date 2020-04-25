@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>menu_sheet</name>
+    <events>
+        <event-block sid="394410045410708">
+            <conditions>
+                <condition id="0" name="On clicked" sid="561408341113283" type="button_signup" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set enabled" sid="976144638190305" type="button_signup">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="3" name="Set enabled" sid="243625127758141" type="button_login">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="41" name="RegistrationRequest" sid="456359614542176" type="GameSparks">
+                    <param id="0" name="displayName">input_user.Text</param>
+                    <param id="1" name="password">input_pass.Text</param>
+                    <param id="2" name="username">input_user.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="178376877824372">
+            <conditions>
+                <condition id="41" name="onRegistrationResponse" sid="665612497329451" type="GameSparks" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set enabled" sid="876315662369651" type="button_login">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="3" name="Set enabled" sid="886848843556762" type="button_signup">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="0" name="Set text" sid="911880408650467" type="status">
+                    <param id="0" name="Text">GameSparks.GetLastResponse</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="130734051810734">
+            <conditions>
+                <condition id="0" name="On clicked" sid="488045536636973" type="button_login" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set enabled" sid="584972140222429" type="button_signup">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="3" name="Set enabled" sid="539267502433931" type="button_login">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="3" name="AuthenticationRequest" sid="140293736784224" type="GameSparks">
+                    <param id="0" name="username">input_user.Text</param>
+                    <param id="1" name="password">input_pass.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="561545561099818">
+            <conditions>
+                <condition id="3" name="onAuthenticationResponse" sid="446587207702892" type="GameSparks" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set enabled" sid="189038200714241" type="button_login">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="3" name="Set enabled" sid="974179835549291" type="button_signup">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="0" name="Set text" sid="708006431003712" type="status">
+                    <param id="0" name="Text">GameSparks.GetLastResponse</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
